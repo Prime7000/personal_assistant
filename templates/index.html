@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+<h1 style="padding-left:10px; color: gray; margin: 1px;">Services</h1>
+
+<style>
+    .parent {
+        display: grid;
+        /* Adjust column width to be exactly 310px */
+        grid-template-columns: repeat(3, 310px);
+        /* Remove auto-fit since we want fixed columns */
+        gap: 2rem;
+        padding: 20px;
+        /* Center the grid */
+        justify-content: center;
+        /* Ensure container allows for proper grid alignment */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .child {
+        /* Fixed width to match grid column */
+        width: 310px;
+        /* Set a fixed height */
+        height: 167px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        box-shadow: 0px 3px 3px gray;
+        background-color: #F4F7F5;
+        /* Prevent content overflow */
+        overflow: hidden;
+        /* Ensure padding is included in total width/height */
+        box-sizing: border-box;
+    }
+
+    .icon-container {
+        margin: 0 0 12px 0;
+    }
+
+    .icon {
+        font-size: 30px;
+        display: inline-block;
+        background-color: #236A2B;
+        color: white;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    .title {
+        margin: 0 0 8px 0;
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+    .description {
+        margin: 0;
+        font-weight: 500;
+        color: gray;
+        font-size: 14px;
+        line-height: 1.4;
+        /* Prevent text overflow */
+        overflow: hidden;
+        /* Add ellipsis for overflowing text */
+        text-overflow: ellipsis;
+        /* Limit to 3 lines */
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
+    /* Add media queries for responsiveness */
+    @media screen and (max-width: 1024px) {
+        .parent {
+            grid-template-columns: repeat(2, 310px);
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .parent {
+            grid-template-columns: repeat(1, 310px);
+        }
+    }
+</style>
+
+<div class="parent">
+    <!-- Card 1 -->
+    <div class="child">
+        <div class="icon-container">
+            <i class="bi bi-soundwave icon"></i>
+        </div>
+        <p class="title">AI Note Taker</p>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="child">
+        <div class="icon-container">
+            <i class="bi bi-soundwave icon"></i>
+        </div>
+        <p class="title">AI Note Taker</p>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="child">
+        <div class="icon-container">
+            <i class="bi bi-soundwave icon"></i>
+        </div>
+        <p class="title">AI Note Taker</p>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="child">
+        <div class="icon-container">
+            <i class="bi bi-soundwave icon"></i>
+        </div>
+        <p class="title">AI Note Taker</p>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="child">
+        <div class="icon-container">
+            <i class="bi bi-soundwave icon"></i>
+        </div>
+        <p class="title">AI Note Taker</p>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="child">
+        <div class="icon-container">
+            <i class="bi bi-soundwave icon"></i>
+        </div>
+        <p class="title">AI Note Taker</p>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="child">
+        <div class="icon-container">
+            <i class="bi bi-soundwave icon"></i>
+        </div>
+        <p class="title">AI Note Taker</p>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="child">
+        <div class="icon-container">
+            <i class="bi bi-soundwave icon"></i>
+        </div>
+        <p class="title">AI Note Taker</p>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+    </div>
+</div>
+<br>
+{% endblock %}
